@@ -71,7 +71,7 @@ extension ViewController: TagViewDataSource, TagViewDelegate {
         label.text = dataArray[index]
         var size = label.sizeThatFits(CGSize.zero)
         size.width += 14
-        size.height += 10
+        size.height += CGFloat(Int.random(in: 6...16))
         return size
     }
     

@@ -6,11 +6,11 @@
 //
 
 import UIKit
-// contentInset alignment lineSpacing itemSpacing
+
 class TagView: UIView {
 
-    var cacheItems: [String: [TagItem]] = [:]
-    var inUseItems: [String: [TagItem]] = [:]
+    private var cacheItems: [String: [TagItem]] = [:]
+    private var inUseItems: [String: [TagItem]] = [:]
     
     weak var delegate: TagViewDelegate?
     
@@ -136,14 +136,14 @@ class TagView: UIView {
             case .right: x =  contentInset.left + contentWidth - lineWidth
             }
             
-            if index > 0 { marginTop += maxHeight }
-            
             subItems.forEach { item in
                 let size = item.frame.size
                 let y = contentInset.top + CGFloat(index) * lineSpacing + marginTop + (maxHeight - size.height) / 2.0
                 frames.append(CGRect(x: x, y: y, width: size.width, height: size.height))
                 x += (itemSpacing + size.width)
             }
+            
+            marginTop += maxHeight
         }
         
         for (index, item) in items.enumerated() {

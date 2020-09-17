@@ -44,7 +44,6 @@ class ImageTextTagView: TagView {
     
     let label: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 13)
         return label
     }()
     
@@ -107,24 +106,21 @@ extension ImageTextTagView: TagViewDataSource, TagViewDelegate {
     func tagView(_ tagView: TagView, itemAt index: Int) -> TagItem {
         let item = tagView.dequeueReusableItem(with: ImageTextTagItem.self)
         let (data, config, state) = dataArray[index]
+        item.configuration = config
         item.textLabel.text = data.text
         item.imageView.image = data.image
-        item.textLabel.font = config.font
-        item.textLabel.textColor = config.textColor
-        item.borderWidth = config.borderWidth
-        item.borderColor = config.borderColor
-        item.cornerRadius = config.cornerRadius
-        item.backgroundColor = config.backgroundColor
         item.state = state
         return item
     }
 
     func tagView(_ tagView: TagView, sizeAt index: Int) -> CGSize {
-        let (data, _, _) = dataArray[index]
+        let (data, config, _) = dataArray[index]
+        label.font = config.font
         label.text = data.text
         var size = label.sizeThatFits(CGSize.zero)
-        size.width += 14
-        size.height += 10
+        let imageWidth = data.image?.size.width ?? 0
+        size.width = size.width + imageWidth + config.spacing + config.contentInset.left + config.contentInset.right
+        size.height = size.height + config.contentInset.top + config.contentInset.bottom
         return size
     }
     

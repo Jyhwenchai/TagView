@@ -9,6 +9,7 @@ import UIKit
 
 class TagItem: UIView {
     
+    /// ＜ 0 则取一半的视图高度为值
     var cornerRadius: CGFloat {
         get { layer.cornerRadius }
         set { layer.cornerRadius = newValue }
@@ -25,5 +26,10 @@ class TagItem: UIView {
             return UIColor(cgColor: color)
         }
         set { layer.borderColor = newValue?.cgColor }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = cornerRadius < 0 ? bounds.height / 2.0 : cornerRadius
     }
 }

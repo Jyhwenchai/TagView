@@ -26,7 +26,7 @@ class ImageTextTagViewController: UIViewController {
         tagView.frame = view.bounds
         tagView.frame.origin.y += 100
         view.addSubview(tagView)
-        let config = ImageTextTagItem.Configure(font:.systemFont(ofSize: 13), cornerRadius: 13, borderWidth: 1, borderColor: UIColor.red)
+        let config = ImageTextTagItem.Configure(font:.systemFont(ofSize: 13), cornerRadius: -1, borderWidth: 1, borderColor: UIColor.red, contentInset: UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8))
         for _ in 0..<20 {
             tagView.addData(ImageTextTagView.Data(text: "hello"), by: config)
         }
@@ -57,6 +57,25 @@ class ImageTextTagViewController: UIViewController {
         for _ in 0..<3 {
             tagView.insertData(ImageTextTagView.Data(text: "reversed"), by: reversedConfig, state: .reversed, at: Int.random(in: 2...20))
         }
+        
+        var imageConfig = config
+        imageConfig.backgroundColor = UIColor.systemOrange
+        imageConfig.borderColor = nil
+        imageConfig.borderWidth = 0.0
+        imageConfig.textColor = UIColor.white
+        imageConfig.spacing = 6
+        for _ in 0..<3 {
+            tagView.insertData(ImageTextTagView.Data(image: UIImage(named: "homepage_icon_myposition"), text: "image"), by: imageConfig, state: .reversed, at: Int.random(in: 2...20))
+        }
+        
+        imageConfig.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 15)
+        imageConfig.alignment = .left
+        imageConfig.reverseLayout = true
+        for _ in 0..<3 {
+            tagView.insertData(ImageTextTagView.Data(image: UIImage(named: "homepage_icon_myposition"), text: "image"), by: imageConfig, state: .reversed, at: Int.random(in: 2...20))
+        }
+        
+        
         tagView.addIgnoreActionState(.reversed)
         tagView.sizeToFit()
         

@@ -105,9 +105,16 @@ extension ImageTextTagView: TagViewDataSource, TagViewDelegate {
     func tagView(_ tagView: TagView, sizeAt index: Int) -> CGSize {
         let (data, config, _) = dataArray[index]
         label.font = config.font
-        label.text = data.text
-        var size = label.sizeThatFits(CGSize.zero)
+        if let attributedText = data.attributedText {
+            label.text = nil
+            label.attributedText = attributedText
+        } else {
+            label.attributedText = nil
+            label.text = data.text
+        }
+        
         let imageWidth = data.image?.size.width ?? 0
+        var size = label.sizeThatFits(CGSize.zero)
         size.width = size.width + imageWidth + config.spacing + config.contentInset.left + config.contentInset.right
         size.height = size.height + config.contentInset.top + config.contentInset.bottom
         return size

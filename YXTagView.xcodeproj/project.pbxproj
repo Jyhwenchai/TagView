@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6607D6D52511E28000D2E9DF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6607D6D42511E28000D2E9DF /* TableViewController.swift */; };
+		6607D6D72511E34200D2E9DF /* TagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6607D6D62511E34200D2E9DF /* TagTableViewController.swift */; };
+		6607D6D92511E36F00D2E9DF /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6607D6D82511E36F00D2E9DF /* TagCell.swift */; };
+		6607D6DB2511E78500D2E9DF /* ImageTextTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6607D6DA2511E78500D2E9DF /* ImageTextTagView.swift */; };
+		6607D6DD2511EDA200D2E9DF /* ImageTextTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6607D6DC2511EDA200D2E9DF /* ImageTextTagViewController.swift */; };
+		66664C8F250F700500BF1C83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66664C8E250F700500BF1C83 /* AppDelegate.swift */; };
+		66664C93250F700500BF1C83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66664C92250F700500BF1C83 /* ViewController.swift */; };
+		66664C96250F700500BF1C83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66664C94250F700500BF1C83 /* Main.storyboard */; };
+		66664C98250F700700BF1C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66664C97250F700700BF1C83 /* Assets.xcassets */; };
+		66664C9B250F700700BF1C83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66664C99250F700700BF1C83 /* LaunchScreen.storyboard */; };
+		66664CA4250F716A00BF1C83 /* TagViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66664CA3250F716A00BF1C83 /* TagViewDelegate.swift */; };
+		66664CA6250F718500BF1C83 /* TagViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66664CA5250F718500BF1C83 /* TagViewDataSource.swift */; };
+		66664CA8250F721600BF1C83 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66664CA7250F721600BF1C83 /* TagView.swift */; };
+		66664CAC250F746600BF1C83 /* TagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66664CAB250F746600BF1C83 /* TagItem.swift */; };
+		66664CB32510A84500BF1C83 /* ImageTextTagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66664CB22510A84500BF1C83 /* ImageTextTagItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6607D6D42511E28000D2E9DF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		6607D6D62511E34200D2E9DF /* TagTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewController.swift; sourceTree = "<group>"; };
+		6607D6D82511E36F00D2E9DF /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		6607D6DA2511E78500D2E9DF /* ImageTextTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextTagView.swift; sourceTree = "<group>"; };
+		6607D6DC2511EDA200D2E9DF /* ImageTextTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextTagViewController.swift; sourceTree = "<group>"; };
+		66664C8B250F700500BF1C83 /* YXTagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXTagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66664C8E250F700500BF1C83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66664C92250F700500BF1C83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66664C95250F700500BF1C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66664C97250F700700BF1C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66664C9A250F700700BF1C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66664C9C250F700700BF1C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66664CA3250F716A00BF1C83 /* TagViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewDelegate.swift; sourceTree = "<group>"; };
+		66664CA5250F718500BF1C83 /* TagViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewDataSource.swift; sourceTree = "<group>"; };
+		66664CA7250F721600BF1C83 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		66664CAB250F746600BF1C83 /* TagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItem.swift; sourceTree = "<group>"; };
+		66664CB22510A84500BF1C83 /* ImageTextTagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextTagItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66664C88250F700500BF1C83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66664C82250F700500BF1C83 = {
+			isa = PBXGroup;
+			children = (
+				66664C8D250F700500BF1C83 /* YXTagView */,
+				66664C8C250F700500BF1C83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66664C8C250F700500BF1C83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66664C8B250F700500BF1C83 /* YXTagView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66664C8D250F700500BF1C83 /* YXTagView */ = {
+			isa = PBXGroup;
+			children = (
+				66664CA2250F710700BF1C83 /* Classes */,
+				66664C8E250F700500BF1C83 /* AppDelegate.swift */,
+				66664C92250F700500BF1C83 /* ViewController.swift */,
+				6607D6D42511E28000D2E9DF /* TableViewController.swift */,
+				6607D6D62511E34200D2E9DF /* TagTableViewController.swift */,
+				6607D6DC2511EDA200D2E9DF /* ImageTextTagViewController.swift */,
+				6607D6D82511E36F00D2E9DF /* TagCell.swift */,
+				66664C94250F700500BF1C83 /* Main.storyboard */,
+				66664C97250F700700BF1C83 /* Assets.xcassets */,
+				66664C99250F700700BF1C83 /* LaunchScreen.storyboard */,
+				66664C9C250F700700BF1C83 /* Info.plist */,
+			);
+			path = YXTagView;
+			sourceTree = "<group>";
+		};
+		66664CA2250F710700BF1C83 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				66664CA3250F716A00BF1C83 /* TagViewDelegate.swift */,
+				66664CA5250F718500BF1C83 /* TagViewDataSource.swift */,
+				66664CA7250F721600BF1C83 /* TagView.swift */,
+				66664CAB250F746600BF1C83 /* TagItem.swift */,
+				66664CB22510A84500BF1C83 /* ImageTextTagItem.swift */,
+				6607D6DA2511E78500D2E9DF /* ImageTextTagView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66664C8A250F700500BF1C83 /* YXTagView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66664C9F250F700700BF1C83 /* Build configuration list for PBXNativeTarget "YXTagView" */;
+			buildPhases = (
+				66664C87250F700500BF1C83 /* Sources */,
+				66664C88250F700500BF1C83 /* Frameworks */,
+				66664C89250F700500BF1C83 /* Resources */,
+				6607D6DE251219C700D2E9DF /* Integrate Reveal Server */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YXTagView;
+			productName = YXTagView;
+			productReference = 66664C8B250F700500BF1C83 /* YXTagView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66664C83250F700500BF1C83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					66664C8A250F700500BF1C83 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 66664C86250F700500BF1C83 /* Build configuration list for PBXProject "YXTagView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66664C82250F700500BF1C83;
+			productRefGroup = 66664C8C250F700500BF1C83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66664C8A250F700500BF1C83 /* YXTagView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66664C89250F700500BF1C83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66664C9B250F700700BF1C83 /* LaunchScreen.storyboard in Resources */,
+				66664C98250F700700BF1C83 /* Assets.xcassets in Resources */,
+				66664C96250F700500BF1C83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6607D6DE251219C700D2E9DF /* Integrate Reveal Server */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Integrate Reveal Server";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "REVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n\"${BUILD_SCRIPT_PATH}\"\nelse\necho \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66664C87250F700500BF1C83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66664CA6250F718500BF1C83 /* TagViewDataSource.swift in Sources */,
+				66664CAC250F746600BF1C83 /* TagItem.swift in Sources */,
+				6607D6DB2511E78500D2E9DF /* ImageTextTagView.swift in Sources */,
+				6607D6D92511E36F00D2E9DF /* TagCell.swift in Sources */,
+				6607D6DD2511EDA200D2E9DF /* ImageTextTagViewController.swift in Sources */,
+				6607D6D72511E34200D2E9DF /* TagTableViewController.swift in Sources */,
+				66664CA8250F721600BF1C83 /* TagView.swift in Sources */,
+				6607D6D52511E28000D2E9DF /* TableViewController.swift in Sources */,
+				66664C93250F700500BF1C83 /* ViewController.swift in Sources */,
+				66664CB32510A84500BF1C83 /* ImageTextTagItem.swift in Sources */,
+				66664C8F250F700500BF1C83 /* AppDelegate.swift in Sources */,
+				66664CA4250F716A00BF1C83 /* TagViewDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		66664C94250F700500BF1C83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66664C95250F700500BF1C83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66664C99250F700700BF1C83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66664C9A250F700700BF1C83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66664C9D250F700700BF1C83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66664C9E250F700700BF1C83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66664CA0250F700700BF1C83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DTH85SS4GJ;
+				INFOPLIST_FILE = YXTagView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.didong123.luobo.YXTagView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66664CA1250F700700BF1C83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DTH85SS4GJ;
+				INFOPLIST_FILE = YXTagView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.didong123.luobo.YXTagView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66664C86250F700500BF1C83 /* Build configuration list for PBXProject "YXTagView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66664C9D250F700700BF1C83 /* Debug */,
+				66664C9E250F700700BF1C83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66664C9F250F700700BF1C83 /* Build configuration list for PBXNativeTarget "YXTagView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66664CA0250F700700BF1C83 /* Debug */,
+				66664CA1250F700700BF1C83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66664C83250F700500BF1C83 /* Project object */;
+}

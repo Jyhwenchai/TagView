@@ -159,4 +159,30 @@ class ImageTextTagItem: TagItem {
     }
 
     var state: State = .normal
+    
+    struct Data {
+        var image: UIImage?
+        var text: String?
+        var attributedText: NSAttributedString?
+        
+        init(image: UIImage? = nil, text: String? = nil, attributedText: NSAttributedString? = nil) {
+            self.image = image
+            self.text = text
+            self.attributedText = attributedText
+        }
+    }
+    
+    var data: Data = Data() {
+        didSet {
+            if let attributedText = data.attributedText {
+                textLabel.text = nil
+                textLabel.attributedText = attributedText
+            } else {
+                textLabel.attributedText = nil
+                textLabel.text = data.text
+            }
+            imageView.image = data.image
+        }
+    }
+    
 }

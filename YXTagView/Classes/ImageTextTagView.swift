@@ -11,20 +11,10 @@ class ImageTextTagView: TagView {
     
     private var ignoreActionStates: [ImageTextTagItem.State] = [.disabled]
     
-    struct Data {
-        var image: UIImage?
-        var text: String?
-        
-        init(image: UIImage? = nil, text: String? = nil) {
-            self.image = image
-            self.text = text
-        }
-    }
-    
-    typealias DataItem = (Data, ImageTextTagItem.Configure, ImageTextTagItem.State)
+    typealias DataItem = (ImageTextTagItem.Data, ImageTextTagItem.Configure, ImageTextTagItem.State)
     var dataArray: [DataItem] = []
     
-    private var actionClosure: ((Int, Data, ImageTextTagItem.Configure, ImageTextTagItem.State) -> Void)? = nil
+    private var actionClosure: ((Int, ImageTextTagItem.Data, ImageTextTagItem.Configure, ImageTextTagItem.State) -> Void)? = nil
     
     // MARK: Initialize
     override init(frame: CGRect) {
@@ -60,11 +50,11 @@ class ImageTextTagView: TagView {
     }
     
     // MARK: data operation
-    func addData(_ data: Data, by configure: ImageTextTagItem.Configure, state: ImageTextTagItem.State = .normal) {
+    func addData(_ data: ImageTextTagItem.Data, by configure: ImageTextTagItem.Configure, state: ImageTextTagItem.State = .normal) {
         dataArray.append((data, configure, state))
     }
     
-    func insertData(_ data: Data, by configure: ImageTextTagItem.Configure, state: ImageTextTagItem.State = .normal, at index: Int) {
+    func insertData(_ data: ImageTextTagItem.Data, by configure: ImageTextTagItem.Configure, state: ImageTextTagItem.State = .normal, at index: Int) {
         if index < 0, index > dataArray.count {
             fatalError("Specified index is out of range")
         }
@@ -72,11 +62,11 @@ class ImageTextTagView: TagView {
         dataArray.insert((data, configure, state), at: index)
     }
     
-    func addDatas(_ datas: [Data], by configure: ImageTextTagItem.Configure, state: ImageTextTagItem.State = .normal) {
+    func addDatas(_ datas: [ImageTextTagItem.Data], by configure: ImageTextTagItem.Configure, state: ImageTextTagItem.State = .normal) {
         datas.forEach { dataArray.append(($0, configure, state)) }
     }
     
-    func insertDatas(_ datas: [Data], by configure: ImageTextTagItem.Configure, state: ImageTextTagItem.State = .normal, at index: Int) {
+    func insertDatas(_ datas: [ImageTextTagItem.Data], by configure: ImageTextTagItem.Configure, state: ImageTextTagItem.State = .normal, at index: Int) {
         if index < 0, index > dataArray.count {
             fatalError("Specified index is out of range")
         }
@@ -92,7 +82,7 @@ class ImageTextTagView: TagView {
     }
     
     // listen click event
-    func listenActionEvent(with closure: ((Int, Data, ImageTextTagItem.Configure, ImageTextTagItem.State) -> Void)?) {
+    func listenActionEvent(with closure: ((Int, ImageTextTagItem.Data, ImageTextTagItem.Configure, ImageTextTagItem.State) -> Void)?) {
         self.actionClosure = closure
     }
 }
@@ -107,8 +97,7 @@ extension ImageTextTagView: TagViewDataSource, TagViewDelegate {
         let item = tagView.dequeueReusableItem(with: ImageTextTagItem.self)
         let (data, config, state) = dataArray[index]
         item.configuration = config
-        item.textLabel.text = data.text
-        item.imageView.image = data.image
+        item.data = data
         item.state = state
         return item
     }

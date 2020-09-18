@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  LimitLineViewController.swift
 //  YXTagView
 //
-//  Created by 蔡志文 on 2020/9/14.
+//  Created by 蔡志文 on 2020/9/17.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class LimitLineViewController: UIViewController {
 
     let tagView: TagView = {
         let tagView = TagView()
@@ -15,13 +15,18 @@ class ViewController: UIViewController {
         tagView.lineSpacing = 10
         tagView.alignment = .left
         tagView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        tagView.limitLine = 0
+        tagView.limitLine = 2
+        tagView.limitView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 30, height: 14)))
+        tagView.limitView?.backgroundColor = UIColor.systemPink
         return tagView
     }()
     
     let dataArray = [
         "123","12223","22222","111123","13","12``3","123","123", "123","12223","22222","11额1123","13","12``3","123", "123","12223","22222","111123","13","12``3","12ss3","12大幅度3","1好好计划23","12553","1就好23","1是否23",
     ]
+    
+    //    let dataArray = ["123","12223","22222","111123","13","12``3","123","123", "123","12223","22222","11额1123","13","12``31111"]
+        
     
     let label: UILabel = {
         let label = UILabel()
@@ -51,7 +56,7 @@ class ViewController: UIViewController {
      }
 }
 
-extension ViewController: TagViewDataSource, TagViewDelegate {
+extension LimitLineViewController: TagViewDataSource, TagViewDelegate {
     
     func numbers(in tagView: TagView) -> Int {
         dataArray.count

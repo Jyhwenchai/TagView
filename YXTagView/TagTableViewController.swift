@@ -49,6 +49,7 @@ class TagTableViewController: UITableViewController {
                 sizes.append(size)
             }
             let size = TagView.calculateContentSize(with: sizes, itemSpacing: 10, lineSpacing: 10, contentInset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), preferredMaxLayoutWidth: view.bounds.width)
+//            let size = TagView.calculateContentSize(with: sizes, itemSpacing: 10, lineSpacing: 10, contentInset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), preferredMaxLayoutWidth: view.bounds.width, limitLine: 2, limitViewSize: CGSize(width: 30, height: 14))
             dataSizes.append(size)
         }
         

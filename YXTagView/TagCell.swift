@@ -15,6 +15,9 @@ class TagCell: UITableViewCell {
         tagView.lineSpacing = 10
         tagView.alignment = .center
         tagView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+//        tagView.limitLine = 2
+//        tagView.limitView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 30, height: 14)))
+//        tagView.limitView?.backgroundColor = UIColor.systemPink
         return tagView
     }()
     

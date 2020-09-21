@@ -90,6 +90,7 @@ class TagView: UIView {
             item.tag = index
             let (stop, nextLineItem) = layout(item: item, in: &currentLineItems, at: index)
             if stop { break }
+            
             if let nextItem = nextLineItem {
                 layoutItems.append(currentLineItems)
                 currentLineItems.removeAll()
@@ -113,7 +114,7 @@ class TagView: UIView {
     }
     
     
-    func layout(item: TagItem, in currentGroup: inout [UIView], at index: Int) -> (Bool, TagItem?) {
+    private func layout(item: TagItem, in currentGroup: inout [UIView], at index: Int) -> (Bool, TagItem?) {
         
         let size = delegate!.tagView(self, sizeAt: index)
         let numbers = dataSource!.numbers(in: self)
@@ -156,7 +157,7 @@ class TagView: UIView {
         return (false, returnNextLineItem ? item : nil)
     }
     
-    func updateItemGroupsFrame(_ itemGroups: [[UIView]]) {
+    private func updateItemGroupsFrame(_ itemGroups: [[UIView]]) {
         
         let contentWidth = frame.width - contentInset.left - contentInset.right
         
@@ -188,8 +189,7 @@ class TagView: UIView {
             
             marginTop += lineSpacing + maxHeight
         }
-        
-        print()
+    
     }
     
 
